@@ -1,4 +1,5 @@
-# nvim
+# Customized Neovim Configuration
+
 ![nvim](/preview.png?raw=true)
 
 Run :PackerInstall after starting, and restart nvim.
