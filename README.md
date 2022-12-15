@@ -2,6 +2,12 @@
 
 ![nvim](/preview.png?raw=true)
 
-Run :PackerInstall after starting, and restart nvim.
+# Post Install
+- :PackerInstall
+- Restart nvim
+- :TSUpdate
+- :Neorg sync_parsers
 
-On your second run run :TSUpdate & :Neorg sync_parsers.
+# Troubleshooitng
+You might need to install various dependancies
+- :checkhealth is your friend!
