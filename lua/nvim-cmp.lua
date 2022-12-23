@@ -20,7 +20,7 @@ local cmp = require'cmp'
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       
-      ["<Tab>"] = cmp.mapping(function(fallback)
+      ["<C-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
         else

@@ -91,6 +91,8 @@ return require('packer').startup({ function()
   use { 'RRethy/vim-illuminate' }
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
   use { 'rebelot/kanagawa.nvim' }
+  use { 'github/copilot.vim' }
+
   -- use({ 'folke/noice.nvim', config = function()
   --     require("noice").setup({
   --       lsp = {
@@ -133,6 +135,7 @@ return require('packer').startup({ function()
       require('neoclip').setup()
     end,
   }
+  use { 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim' }
   use {'hkupty/iron.nvim'}
   use {
     "jose-elias-alvarez/null-ls.nvim",
