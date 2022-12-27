@@ -73,6 +73,8 @@ vim.g.loaded_python_provider = 1
 vim.opt.foldmethod = "expr" -- Folding Method
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.number = true
+vim.api.nvim_set_hl(0, 'Normal', {background = 'none'})
+vim.api.nvim_set_hl(0, 'NormalFloat', {background = 'none'})
 -- vim.api.nvim_set_hl("LineNr", "Comment", true)
 -- vim.highlight.create("NormalFloat", { guibg = "Red", guifg = "None" }, false)
 -- vim.highlight.create("FloatBorder", { guibg = "Red" }, false)

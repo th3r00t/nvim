@@ -21,11 +21,6 @@ require('neorg').setup {
       }
     },
     ["core.export"] = {},
-    ["core.gtd.base"] = {
-      config = {
-        workspace = "home"
-      }
-    },
     ["core.norg.manoeuvre"] = {},
     -- ["core.norg.completion"] = {config = {engine = 'nvim-cmp'}},
     ["core.integrations.treesitter"] = {
