@@ -2,7 +2,7 @@ local vim = vim
 require('_neovide')
 vim.lsp.set_log_level("debug")
 vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("space: ")
 vim.opt.listchars:append("eol:↴")
 vim.opt.backup = false
 vim.opt.cmdheight = 1
@@ -44,7 +44,7 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 3                           -- is one of my fav
 vim.opt.sidescrolloff = 3
-vim.opt.guifont = "FiraCode Nerd Font Mono:h6"               -- the font used in graphical neovim applications
+vim.opt.guifont = "FiraCode Nerd Font Mono:h11"               -- the font used in graphical neovim applications
 vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
@@ -54,7 +54,6 @@ vim.opt.linebreak = true
 vim.opt.showbreak = '↪'
 vim.opt.wildmode = 'list:full'
 vim.opt.colorcolumn = '80'
-vim.opt.scrolloff = 15
 vim.opt.fileformats = 'unix,dos'
 vim.opt.inccommand = 'nosplit'
 vim.opt.confirm = true
@@ -123,7 +122,8 @@ vim.api.nvim_set_option('updatetime', 300)
 vim.g.vimspector_sidebar_width = 85
 vim.g.vimspector_bottombar_height = 15
 vim.g.vimspector_terminal_maxwidth = 70
-vim.g.tagbar_ctags_bin = '/usr/bin/ctags'
+vim.g.tagbar_ctags_bin = '/usr/local/bin/ctags'
 vim.g.indentLine_fileTypeExclude = {'dashboard'}
 vim.g.better_whitespace_filetypes_blacklist = 'dashboard'
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.g.devdocs_open_cmd = "qutebrowser"

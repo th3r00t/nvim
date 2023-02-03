@@ -24,12 +24,29 @@ return require('packer').startup({ function()
   use { 'nvim-treesitter/nvim-treesitter', 
   	-- run = ':TSUpdate'
 	}
-  use { "nvim-neorg/neorg", requires = { {'nvim-lua/plenary.nvim',} },
+  -- use { "nvim-neorg/neorg", requires = { {'nvim-lua/plenary.nvim',} },
+  --   config = function()
+  --       require("neorg").setup {}
+  --   end,
+  --   -- run = ":Neorg sync-parsers", -- This is the important bit!
+  -- }
+  use {'nvim-orgmode/orgmode',
     config = function()
-        require("neorg").setup {}
-    end,
-    -- run = ":Neorg sync-parsers", -- This is the important bit!
+    require('orgmode').setup{}
+  end
   }
+  use {'akinsho/org-bullets.nvim', config = function()
+    require('org-bullets').setup()
+  end}
+  use { 'dhruvasagar/vim-table-mode' }
+  -- use {
+  --         'lukas-reineke/headlines.nvim',
+  --         config = function()
+  --             require('headlines').setup()
+  --         end,
+  --     }
+
+
   use { "folke/which-key.nvim",
     config = function()
       require("which-key").setup {}
@@ -47,7 +64,7 @@ return require('packer').startup({ function()
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = {
       'nvim-lua/plenary.nvim',
-      "nvim-neorg/neorg-telescope",
+      -- "nvim-neorg/neorg-telescope",
     }
   }
     -- Telescope Extensions
@@ -70,8 +87,9 @@ return require('packer').startup({ function()
   use { 'nvim-telescope/telescope-dap.nvim' }
   use { 'nvim-telescope/telescope-packer.nvim' }
   use { 'camgraff/telescope-tmux.nvim' }
-  use { 'danielpieper/telescope-tmuxinator.nvim' }
+  -- use { 'danielpieper/telescope-tmuxinator.nvim' }
   use { 'alex-laycalvert/telescope-dotfiles.nvim' }
+  use { 'tom-anders/telescope-vim-bookmarks.nvim' }
   use { 'andweeb/presence.nvim' }
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons",
       config = function() require("trouble").setup { } end }
@@ -82,6 +100,7 @@ return require('packer').startup({ function()
   use { 'simrat39/rust-tools.nvim' }
   use { 'saecki/crates.nvim', tag = 'v0.3.0', requires = { 'nvim-lua/plenary.nvim' },
       config = function() require('crates').setup() end, }
+  use { 'ziglang/zig.vim' }
   use { 'puremourning/vimspector' }
   use { 'preservim/tagbar' }
   use { 'rrethy/vim-hexokinase', run = { 'make hexokinase' }}
@@ -90,9 +109,11 @@ return require('packer').startup({ function()
   use { 'tpope/vim-surround' }
   use { 'RRethy/vim-illuminate' }
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
+  use { 'tpope/vim-rhubarb' }
+  use { "terrortylor/nvim-comment", config = function() require("nvim_comment").setup() end }
   use { 'rebelot/kanagawa.nvim' }
   use { 'github/copilot.vim' }
-
+  use { 'rhysd/devdocs.vim' }
   -- use({ 'folke/noice.nvim', config = function()
   --     require("noice").setup({
   --       lsp = {
@@ -115,11 +136,20 @@ return require('packer').startup({ function()
   --   end,
   --   requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }
   -- })
+  use { 'Glench/Vim-Jinja2-Syntax' }
   use { 'ray-x/lsp_signature.nvim' }
-  use { 'glepnir/dashboard-nvim' }
+  -- use { 'glepnir/dashboard-nvim' }
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    -- config = function ()
+    --     require'alpha'.setup(require'alpha.themes.startify'.config)
+    -- end
+}
   use { 'stevearc/aerial.nvim' }
   use { 'anuvyklack/hydra.nvim' }
   use { 'chentoast/marks.nvim' }
+  use { 'MattesGroeger/vim-bookmarks' }
   use { 'jbyuki/venn.nvim' }
   use { 'lewis6991/gitsigns.nvim', config = function() require('gitsigns').setup() end }
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = function() require('neogit').setup() end }
@@ -137,6 +167,7 @@ return require('packer').startup({ function()
   }
   use { 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim' }
   use {'hkupty/iron.nvim'}
+  use {'LokiChaos/vim-tintin'}
   use {
     "jose-elias-alvarez/null-ls.nvim",
     "jayp0521/mason-null-ls.nvim",

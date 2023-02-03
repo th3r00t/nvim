@@ -47,7 +47,8 @@ local cmp = require'cmp'
       -- { name = 'cmdline' },
       { name = 'path' },
       { name = 'nvim_lua' },
-      { name = 'neorg' },
+      -- { name = 'neorg' },
+      { name = 'orgmode' },
     })
   })
 
