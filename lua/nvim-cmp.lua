@@ -38,17 +38,19 @@ local cmp = require'cmp'
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
+      { name = 'copilot' },
+      { name = 'buffer' },
+      { name = 'calc' },
+      { name = 'orgmode' },
+      -- { name = 'vsnip' }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
       { name = 'crates' },
-      { name = 'buffer' },
       -- { name = 'cmdline' },
       { name = 'path' },
       { name = 'nvim_lua' },
       -- { name = 'neorg' },
-      { name = 'orgmode' },
     })
   })
 
@@ -100,9 +102,9 @@ cmp.event:on('confirm_done',
             cmp.lsp.CompletionItemKind.Function,
             cmp.lsp.CompletionItemKind.Method
           },
-          ---@param char string
-          ---@param item item completion
-          ---@param bufnr buffer number
+          --@param char string
+          --@param item item completion
+          --@param bufnr buffer number
           handler = function(char, item, bufnr)
             -- Your handler function. Inpect with print(vim.inspect{char, item, bufnr})
           end
@@ -112,6 +114,7 @@ cmp.event:on('confirm_done',
 )
 
   -- Set up lspconfig.
+  require('cmp_nvim_lsp').default_capabilities()
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
   -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {

@@ -1,5 +1,5 @@
 local vim = vim
-require('_neovide')
+require('_neovide') -- lua/_neovide.lua
 vim.lsp.set_log_level("debug")
 vim.opt.list = true
 vim.opt.listchars:append("space: ")
@@ -44,7 +44,6 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 3                           -- is one of my fav
 vim.opt.sidescrolloff = 3
-vim.opt.guifont = "FiraCode Nerd Font Mono:h11"               -- the font used in graphical neovim applications
 vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
@@ -127,3 +126,5 @@ vim.g.indentLine_fileTypeExclude = {'dashboard'}
 vim.g.better_whitespace_filetypes_blacklist = 'dashboard'
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 vim.g.devdocs_open_cmd = "qutebrowser"
+vim.g.falcon_background = 0
+vim.g.falcon_inactive = 1

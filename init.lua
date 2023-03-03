@@ -49,6 +49,14 @@ require('_hydra') -- lua/_hydra.lua
 require('_netrw') -- lua/_netrw.lua
 require('_iron') -- lua/_iron.lua
 
+-- Miscellaneous
+require'forem-nvim'.setup {
+    api_key = "eBE7tSi4xNzPjRUu3XgxtXPK"
+}
+-- require("notify").setup({
+--   background_colour = "#000000",
+-- })
 vim.cmd([[
-    colorscheme tokyonight-night
+    " colorscheme tokyonight-night
+    colorscheme falcon
 ]])
