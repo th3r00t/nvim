@@ -125,6 +125,45 @@ vim.g.tagbar_ctags_bin = '/usr/local/bin/ctags'
 vim.g.indentLine_fileTypeExclude = {'dashboard'}
 vim.g.better_whitespace_filetypes_blacklist = 'dashboard'
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-vim.g.devdocs_open_cmd = "qutebrowser"
+vim.g.devdocs_open_cmd = "firefox"
 vim.g.falcon_background = 0
 vim.g.falcon_inactive = 1
+
+-- vim.g.Hexokinase_highlighters = {'sign_column'}
+vim.g.Hexokinase_highlighters = {'foregroundfull'}
+
+local th3r00t_wiki = {}
+local pyShelfServer_wiki = {}
+local pyShelfClient_wiki = {}
+
+th3r00t_wiki.path = '~/Documents/wiki'
+th3r00t_wiki.path_html = '~/public_html/wiki'
+th3r00t_wiki.name = 'th3r00t'
+th3r00t_wiki.auto_export = 1
+th3r00t_wiki.auto_toc = 0
+th3r00t_wiki.auto_generate_tags = 1
+th3r00t_wiki.template_path = '~/Documents/wiki/templates'
+th3r00t_wiki.template_default = 'default'
+th3r00t_wiki.template_ext = '.tpl'
+
+pyShelfServer_wiki.path = '~/.local/builds/pyShelf/wiki'
+pyShelfServer_wiki.path_html = '~/.local/builds/pyShelf/docs/'
+pyShelfServer_wiki.name = 'pyShelf'
+pyShelfServer_wiki.auto_export = 1
+pyShelfServer_wiki.auto_toc = 0
+pyShelfServer_wiki.auto_generate_tags = 1
+pyShelfServer_wiki.template_path = '~/.local/builds/pyShelf/wiki/templates'
+pyShelfServer_wiki.template_default = 'default'
+pyShelfServer_wiki.template_ext = '.tpl'
+
+pyShelfClient_wiki.path = '~/.local/builds/pyShelfClient/'
+pyShelfClient_wiki.path_html = '~/public_html/pyShelfClient'
+pyShelfClient_wiki.name = 'pyShelfClient'
+pyShelfClient_wiki.auto_export = 1
+pyShelfClient_wiki.auto_toc = 0
+pyShelfClient_wiki.auto_generate_tags = 1
+pyShelfClient_wiki.template_path = '~/.local/builds/pyShelfClient/templates'
+pyShelfClient_wiki.template_default = 'default'
+pyShelfClient_wiki.template_ext = '.tpl'
+
+vim.g.vimwiki_list = {th3r00t_wiki, pyShelfServer_wiki, pyShelfClient_wiki}

@@ -24,39 +24,9 @@ return require('packer').startup({ function()
   use { 'nvim-treesitter/nvim-treesitter', 
   -- run = ':TSUpdate'
 }
--- use { "nvim-neorg/neorg", requires = { {'nvim-lua/plenary.nvim',} },
---   config = function()
-  --       require("neorg").setup {}
-  --   end,
-  --   -- run = ":Neorg sync-parsers", -- This is the important bit!
-  -- }
-  use {'nvim-orgmode/orgmode',
-  config = function()
-    require('orgmode').setup{}
-  end
-}
-use {'akinsho/org-bullets.nvim', config = function()
-  require('org-bullets').setup()
-end}
-use { 'dhruvasagar/vim-table-mode' }
--- use {
-  --         'lukas-reineke/headlines.nvim',
-  --         config = function()
-    --             require('headlines').setup()
-    --         end,
-    --     }
-
     use { "folke/which-key.nvim",
     config = function()
       require("which-key").setup {}
-    end
-  }
-  use {
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup {
-      }
     end
   }
   use {
@@ -87,6 +57,7 @@ use { 'nvim-telescope/telescope-dap.nvim' }
 use { 'nvim-telescope/telescope-packer.nvim' }
 use { 'camgraff/telescope-tmux.nvim' }
 -- use { 'danielpieper/telescope-tmuxinator.nvim' }
+use { 'christoomey/vim-tmux-navigator' }
 use { 'alex-laycalvert/telescope-dotfiles.nvim' }
 use { 'tom-anders/telescope-vim-bookmarks.nvim' }
 use { 'andweeb/presence.nvim' }
@@ -227,10 +198,45 @@ use({
     }
   },
 })
-use { 'tools-life/taskwiki' }
 use { 'powerman/vim-plugin-AnsiEsc' }
 use { 'farseer90718/vim-taskwarrior' }
 use { 'vimwiki/vimwiki' }
+use { 'tools-life/taskwiki' }
+-- use { "nvim-neorg/neorg", requires = { {'nvim-lua/plenary.nvim',} },
+--   config = function()
+  --       require("neorg").setup {}
+  --   end,
+  --   -- run = ":Neorg sync-parsers", -- This is the important bit!
+  -- }
+--   use {'nvim-orgmode/orgmode',
+--   config = function()
+--     require('orgmode').setup{}
+--   end
+-- }
+use {'akinsho/org-bullets.nvim', config = function()
+  require('org-bullets').setup()
+end}
+use { 'dhruvasagar/vim-table-mode' }
+-- use {
+  --         'lukas-reineke/headlines.nvim',
+  --         config = function()
+    --             require('headlines').setup()
+    --         end,
+    --     }
+
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+      }
+    end
+  }
+
+use { 'evanleck/vim-svelte' }
+use { 'pangloss/vim-javascript' }
+use { 'HerringtonDarkholme/yats.vim' }
+
 end,
 config = {
   profile = {

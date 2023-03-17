@@ -28,7 +28,7 @@ local packer_bootstrap = ensure_packer()
 require('plugins') -- lua/plugins.lua
 require('treesitter') -- lua/treesitter.lua
 -- require('config_neorg') -- lua/config_neorg.lua
-require('config_org') -- lua/config_org.lua
+-- require('config_org') -- lua/config_org.lua
 require('options') -- lua/options.lua
 require('nvim-cmp') -- lua/nvim-cmp.lua
 require('_telescope') -- lua/_telescope.lua
@@ -57,6 +57,6 @@ require'forem-nvim'.setup {
 --   background_colour = "#000000",
 -- })
 vim.cmd([[
-    " colorscheme tokyonight-night
-    colorscheme falcon
+    colorscheme tokyonight-night
+    " colorscheme falcon
 ]])

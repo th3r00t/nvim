@@ -44,11 +44,16 @@ wk.register({
 })
 
 mapx.group("silent", function()
-nnoremap("<M-h>", "<C-w><", "Inc Left")
-nnoremap("<M-l>", "<C-w>>", "Inc Right")
-nnoremap("<M-j>", "<C-w>-", "Inc Up")
-nnoremap("<M-k>", "<C-w>+", "Inc Down")
+-- nnoremap("<M-h>", "<C-w><", "Inc Left")
+-- nnoremap("<M-l>", "<C-w>>", "Inc Right")
+-- nnoremap("<M-j>", "<C-w>-", "Inc Up")
+-- nnoremap("<M-k>", "<C-w>+", "Inc Down")
+nnoremap("<M-h>", ":TmuxNavigateLeft", "Inc Left")
+nnoremap("<M-l>", ":TmuxNavigateRight", "Inc Right")
+nnoremap("<M-j>", ":TmuxNavigateUp", "Inc Up")
+nnoremap("<M-k>", ":TmuxNavigateDown", "Inc Down")
 end)
+
 -- Overrides default <S-k>
 -- nnoremap("<S-k>", ":devdocs-under-cursor<CR>", "DevDocs under_cursor")
 mapx.nname("<C-x>", "+Actions")
@@ -200,3 +205,5 @@ nnoremap("<leader><Tab><space>", ":Telescope tele_tabby list<Cr>", "Tab List")
 nnoremap("<leader><Tab>n", ":tabnext<Cr>", "Next Tab")
 nnoremap("<leader><Tab>p", ":tabprevious<Cr>", "Previous Tab")
 nnoremap("<leader><Tab><Tab>", ":tabnew<Cr>", "New Tab")
+
+
