@@ -236,7 +236,7 @@ use { 'dhruvasagar/vim-table-mode' }
 use { 'evanleck/vim-svelte' }
 use { 'pangloss/vim-javascript' }
 use { 'HerringtonDarkholme/yats.vim' }
-
+use { 'francoiscabrol/ranger.vim', requires = { 'rbgrouleff/bclose.vim' } }
 end,
 config = {
   profile = {

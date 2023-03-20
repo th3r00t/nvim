@@ -37,9 +37,12 @@ wk.register({
   },
   ["<leader>m"] = {
     name = "+marks",
-    m = { "<cmd>Telescope vim_bookmarks<cr>", "Show * Bookmarks" },
-    a = { "<cmd>Telescope vim_bookmarks<cr>", "Show * Bookmarks" },
     b = { "<cmd>Telescope vim_bookmarks current_file<cr>", "Show Buffer Bookmarks" },
+    m = { "<cmd>Telescope vim_bookmarks<cr>", "Show All Bookmarks" },
+    l = { "<cmd>BookmarkLoad /home/th3r00t/.vim-bookmarks<cr>", "Load Bookmarks" },
+    s = { "<cmd>BookmarkSave /home/th3r00t/.vim-bookmarks<cr>", "Save Bookmarks" },
+    t = { "<cmd>BookmarkToggle<cr>", "Toggle Bookmark" },
+    a = { "<cmd>BookmarkAnnotate<cr>", "Annotate Bookmark" },
   },
 })
 
@@ -64,7 +67,9 @@ mapx.nname("<C-x>", "+Actions")
   nnoremap("<C-x>3", ":vsplit<Cr>", "hsplit")
 nnoremap("<M-x>x", ":Telescope commands<Cr>")
 inoremap("<M-x>x", "<esc>:Telescope commands<Cr>")
-nnoremap("<M-x>/", ":Ag ")
+nnoremap("<F2>", ":Ag ")
+nnoremap("<F4>", ":RangerCurrentDirectoryExistingOrNewTab<Cr>")
+nnoremap("<M-x>/", ":Telescope resume<Cr>")
 nnoremap("<M-x>!", ":luafile %<Cr>","Source (lua) here")
 inoremap("<M-x>/", "<esc>:Ag ")
 nnoremap("<M-x>?", ":Cheatsheet<Cr>")
