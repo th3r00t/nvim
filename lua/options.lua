@@ -167,3 +167,5 @@ pyShelfClient_wiki.template_default = 'default'
 pyShelfClient_wiki.template_ext = '.tpl'
 
 vim.g.vimwiki_list = {th3r00t_wiki, pyShelfServer_wiki, pyShelfClient_wiki}
+
+vim.g.diagnostics = "nvim_lsp"

@@ -123,7 +123,20 @@ use {
     --     require'alpha'.setup(require'alpha.themes.startify'.config)
     -- end
   }
-  use { 'stevearc/aerial.nvim' }
+  use { 'stevearc/aerial.nvim',
+  config = function()
+    require('aerial').setup()
+    vim.api.nvim_set_keymap('n', '<leader>aa', '<cmd>AerialToggle<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>at', '<cmd>AerialToggleType<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>as', '<cmd>AerialToggleSymbol<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>ad', '<cmd>AerialToggleDocumentation<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>ac', '<cmd>AerialToggleCode<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>ah', '<cmd>AerialToggleHierarchy<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>ao', '<cmd>AerialToggleOutline<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>af', '<cmd>AerialToggleFloat<cr>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>ag', '<cmd>AerialToggleAll<cr>', { noremap = true, silent = true })
+  end
+}
   use { 'anuvyklack/hydra.nvim' }
   use { 'chentoast/marks.nvim' }
   use { 'MattesGroeger/vim-bookmarks' }
@@ -237,6 +250,33 @@ use { 'evanleck/vim-svelte' }
 use { 'pangloss/vim-javascript' }
 use { 'HerringtonDarkholme/yats.vim' }
 use { 'francoiscabrol/ranger.vim', requires = { 'rbgrouleff/bclose.vim' } }
+
+use { 'akinsho/nvim-bufferline.lua',
+  requires = 'nvim-tree/nvim-web-devicons',
+  config = function()
+    require('bufferline').setup({
+      options = {
+        diagnostics = "nvim_lsp",
+        offsets = {
+          {
+            filetype = "NvimTree",
+            text = "File Explorer",
+            highlight = "Directory",
+            text_align = "left"
+          }
+        },
+        separator_style = "slant",
+        hover = {
+          enabled = true,
+          delay = 200,
+          reveal = {'close'},
+          sort_by = 'tabs',
+        }
+
+        }
+    })
+  end
+}
 end,
 config = {
   profile = {
