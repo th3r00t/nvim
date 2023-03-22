@@ -19,6 +19,9 @@ vim.cmd([[
 --    endif
 --  ]])
 vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])
+vim.cmd([[autocmd FileType python,javascript,typescript,zig,rust,html,sass,scss,css,lua AerialOpen]])
+vim.cmd([[autocmd FileType python,javascript,typescript,zig,rust,html,sass,scss,css,lua Trouble]])
+vim.cmd([[autocmd FileType python,javascript,typescript,zig,rust,html,sass,scss,css,lua TroubleRefresh]])
 vim.cmd([[
   if executable('ccls')
    au User lsp_setup call lsp#register_server({

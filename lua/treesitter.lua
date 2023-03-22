@@ -26,7 +26,8 @@ require'nvim-treesitter.configs'.setup {
       "typescript",
       "vim",
       "vue",
-      "yaml"
+      "yaml",
+      "zig"
     },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
