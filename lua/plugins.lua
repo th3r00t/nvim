@@ -288,7 +288,9 @@ return require("packer").startup({
       ft = "zig",
       config = function()
         -- Initialize with default config
-        require("zig-tools").setup()
+        require("zig-tools").setup({
+          formatter = { enable = true },
+        })
       end,
       requires = {
         {
@@ -525,6 +527,7 @@ return require("packer").startup({
         require("barbecue").setup()
       end,
     })
+    use({ "mikesoylu/ai.vim" })
     -- DO NOT EDIT BELOW THIS LINE --
   end,
   config = {
