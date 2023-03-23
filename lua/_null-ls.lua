@@ -55,7 +55,38 @@ null_ls.setup({
 require("mason-null-ls").setup({
   -- A list of sources to install if they're not already installed.
   -- This setting has no relation with the `automatic_installation` setting.
-  -- ensure_installed = {'stylua', 'eslint_d', 'xo', 'luasnip', 'cbfmt', 'cpplint', 'clang_format', 'djlint', 'hadolint', 'prettierd', 'jq', 'autopep8', 'black', 'flake8', 'isort', 'pylint', 'yapf', 'sql_formatter', 'taplo', 'vint', 'yamlfmt', 'editorconfig_checker', 'missspell'},
+  ensure_installed = {
+    "stylua",
+    "eslint_d",
+    "xo",
+    "luasnip",
+    "cbfmt",
+    "cpplint",
+    "clang_format",
+    "djlint",
+    "hadolint",
+    "prettierd",
+    "jq",
+    "autopep8",
+    "black",
+    "flake8",
+    "isort",
+    "pylint",
+    "yapf",
+    "sql_formatter",
+    "taplo",
+    "vint",
+    "yamlfmt",
+    "editorconfig_checker",
+    "missspell",
+    "rustfmt",
+    "rust_analyzer",
+    "shfmt",
+    "shellharden",
+    "solargraph",
+    "tflint",
+    "terraform",
+  },
   -- Run `require("null-ls").setup`.
   -- Will automatically install masons tools based on selected sources in `null-ls`.
   -- Can also be an exclusion list.
@@ -69,3 +100,4 @@ require("mason-null-ls").setup({
   -- 	- { types = { SOURCE_NAME = {TYPES} } }. Allows overriding default configuration. Ex: { types = { eslint_d = {'formatting'} } }
   automatic_setup = true,
 })
+require("null-ls").setup({ sources = { require("mason-null-ls").sources } })
