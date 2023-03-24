@@ -205,3 +205,4 @@ vim.g.markdown_fenced_languages = {
   "xml",
   "yaml",
 }
+vim.g.grepprg = "rg\\ --vimgrep\\ --smart-case\\ --follow"

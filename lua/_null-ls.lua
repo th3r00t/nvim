@@ -10,7 +10,7 @@ null_ls.setup({
     null_ls.builtins.diagnostics.todo_comments,
     null_ls.builtins.diagnostics.tsc,
     null_ls.builtins.diagnostics.vint,
-    null_ls.builtins.diagnostics.vulture,
+    -- null_ls.builtins.diagnostics.vulture,
     null_ls.builtins.diagnostics.write_good,
     -- null_ls.builtins.diagnostics.ansiblelint,
     null_ls.builtins.diagnostics.clang_check,

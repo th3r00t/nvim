@@ -369,6 +369,7 @@ return require("packer").startup({
               reveal = { "close" },
               sort_by = "tabs",
             },
+            mode = "tabs",
           },
         })
       end,
