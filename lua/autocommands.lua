@@ -37,16 +37,16 @@ vim.cmd([[
       \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
       \ })
   endif
-  let g:lsp_cxx_hl_use_text_props = 1 
-  
-  if executable('pyls')
+  let g:lsp_cxx_hl_use_text_props = 1
+
+  " if executable('pyls')
       " pip install python-language-server
-      au User lsp_setup call lsp#register_server({
-          \ 'name': 'pyls',
-          \ 'cmd': {server_info->['pyls']},
-          \ 'allowlist': ['python'],
-          \ })
-  endif
+  "    au User lsp_setup call lsp#register_server({
+  "        \ 'name': 'pyls',
+  "        \ 'cmd': {server_info->['pyls']},
+  "        \ 'allowlist': ['python'],
+  "        \ })
+  " endif
 
   function! s:on_lsp_buffer_enabled() abort
       setlocal omnifunc=lsp#complete
@@ -67,7 +67,7 @@ vim.cmd([[
 
       let g:lsp_format_sync_timeout = 1000
       autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
-      
+
       " refer to doc to add more commands
   endfunction
 
