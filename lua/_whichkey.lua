@@ -51,10 +51,10 @@ mapx.group("silent", function()
   -- nnoremap("<M-l>", "<C-w>>", "Inc Right")
   -- nnoremap("<M-j>", "<C-w>-", "Inc Up")
   -- nnoremap("<M-k>", "<C-w>+", "Inc Down")
-  -- nnoremap("<M-h>", ":TmuxNavigateLeft", "Inc Left")
-  -- nnoremap("<M-l>", ":TmuxNavigateRight", "Inc Right")
-  -- nnoremap("<M-j>", ":TmuxNavigateUp", "Inc Up")
-  -- nnoremap("<M-k>", ":TmuxNavigateDown", "Inc Down")
+  nnoremap("<M-h>", ":TmuxNavigateLeft", "Left")
+  nnoremap("<M-l>", ":TmuxNavigateRight", "Right")
+  nnoremap("<M-j>", ":TmuxNavigateUp", "Up")
+  nnoremap("<M-k>", ":TmuxNavigateDown", "Down")
 end)
 
 -- Overrides default <S-k>
@@ -67,7 +67,6 @@ nnoremap("<C-x>2", ":split<Cr>", "hsplit")
 nnoremap("<C-x>3", ":vsplit<Cr>", "hsplit")
 nnoremap("<M-x>x", ":Telescope commands<Cr>")
 inoremap("<M-x>x", "<esc>:Telescope commands<Cr>")
-nnoremap("<F2>", ":Ag ")
 
 -- :EditVifm - select a file or files to open in the current buffer
 -- :Vifm - alias for :EditVifm to be used like :vert Vifm
@@ -78,9 +77,14 @@ nnoremap("<F2>", ":Ag ")
 -- :TabVifm - select a file or files to open in tabs
 -- :VifmCs - attempts to convert Vim's color scheme to Vifm's one
 
-nnoremap("<F3>", "<cmd>PickColor<CR>")
-inoremap("<F3>", "<cmd>PickColorInsert<CR>")
+nnoremap("<F1>", ":Telescope help_tags<CR>")
+nnoremap("<F2>", ":Ag ")
+nnoremap("<F3>", ":Telescope man_pages<CR>")
 nnoremap("<F4>", ":EditVifm<Cr>")
+nnoremap("<F9>", ":Telescope tags<Cr>", "Project Tags")
+nnoremap("<F7>", ":Neogit<Cr>", "Project Tags")
+nnoremap("<F8>", ":Telescope keymaps<Cr>", "Project Tags")
+nnoremap("<F10>", ":Telescope live_grep<Cr>", "Live Grep")
 nnoremap("<leader><F4>", ":DiffVifm<Cr>")
 nnoremap("<M-x>/", ":Telescope resume<Cr>", "Telescope Resume")
 nnoremap("<M-x>!", ":luafile %<Cr>", "Source (lua) here")

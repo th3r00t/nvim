@@ -1,6 +1,6 @@
 require("telescope").setup({
   defaults = {
-    layout_config = { horizontal = { width = 0.8 } },
+    layout_config = { horizontal = { width = 0.9 } },
   },
   pickers = {
     find_files = {
@@ -16,13 +16,13 @@ require("telescope").setup({
       theme = "dropdown",
     },
     buffers = {
-      theme = "ivy",
+      theme = "dropdown",
     },
     old_files = {
       theme = "ivy",
     },
     commands = {
-      theme = "ivy",
+      theme = "dropdown",
     },
     tags = {
       theme = "dropdown",
@@ -34,13 +34,13 @@ require("telescope").setup({
       theme = "dropdown",
     },
     help_tags = {
-      theme = "ivy",
+      theme = "dropdown",
     },
     man_pages = {
-      theme = "ivy",
+      theme = "dropdown",
     },
     marks = {
-      theme = "ivy",
+      theme = "dropdown",
     },
     colorscheme = {
       theme = "dropdown",
@@ -52,7 +52,7 @@ require("telescope").setup({
       theme = "dropdown",
     },
     registers = {
-      theme = "ivy",
+      theme = "dropdown",
     },
     treesitter = {
       theme = "dropdown",
@@ -60,8 +60,8 @@ require("telescope").setup({
   },
   extensions = {
     file_browser = {
-      theme = "ivy",
-      hijack_netrw = false,
+      theme = "dropdown",
+      hijack_netrw = true,
     },
     command_palette = {
       {

@@ -229,9 +229,23 @@ return require("packer").startup({
     })
     use({
       "TimUntersberger/neogit",
-      requires = "nvim-lua/plenary.nvim",
+      requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
       config = function()
-        require("neogit").setup()
+        require("neogit").setup({
+          disable_signs = false,
+          disable_context_highlighting = false,
+          disable_commit_confirmation = false,
+          -- customize displayed signs
+          signs = {
+            -- { CLOSED, OPENED }
+            section = { "", "" },
+            item = { "", "" },
+            hunk = { "", "" },
+          },
+          integrations = {
+            diffview = true,
+          },
+        })
       end,
     })
     use({ "folke/neodev.nvim" })
