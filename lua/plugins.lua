@@ -25,6 +25,7 @@ return require("packer").startup({
       "nvim-treesitter/nvim-treesitter",
       -- run = ':TSUpdate'
     })
+    use("nvim-treesitter/nvim-treesitter-context")
     use({
       "folke/which-key.nvim",
       config = function()
@@ -124,7 +125,9 @@ return require("packer").startup({
     use({ "github/copilot.vim" })
     use({ "hrsh7th/cmp-copilot" })
     use({ "rhysd/devdocs.vim" })
-    --   use({ 'folke/noice.nvim', config = function()
+    -- use({
+    --   "folke/noice.nvim",
+    --   config = function()
     --     require("noice").setup({
     --       lsp = {
     --         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -134,20 +137,20 @@ return require("packer").startup({
     --           ["cmp.entry.get_documentation"] = true,
     --         },
     --         signature = {
-    --           enabled = false
+    --           enabled = true,
     --         },
     --       },
     --       -- you can enable a preset for easier configuration
     --       presets = {
-    --         bottom_search = true, -- use a classic bottom cmdline for search
+    --         bottom_search = true,   -- use a classic bottom cmdline for search
     --         command_palette = true, -- position the cmdline and popupmenu together
     --         long_message_to_split = true, -- long messages will be sent to a split
-    --         inc_rename = false, -- enables an input dialog for inc-rename.nvim
-    --         lsp_doc_border = true, -- add a border to hover docs and signature help
+    --         inc_rename = false,     -- enables an input dialog for inc-rename.nvim
+    --         lsp_doc_border = true,  -- add a border to hover docs and signature help
     --       },
     --     })
     --   end,
-    --   requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }
+    --   requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
     -- })
     use({
       "jghauser/mkdir.nvim",
@@ -304,6 +307,11 @@ return require("packer").startup({
         -- Initialize with default config
         require("zig-tools").setup({
           formatter = { enable = true },
+          auto_compile = { enable = true },
+          integrations = {
+            package_managers = { "zigmod", "gyro" },
+            zls = { hints = true, management = { enable = true } },
+          },
         })
       end,
       requires = {
