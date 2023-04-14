@@ -66,7 +66,7 @@ return require("packer").startup({
     use({ "christoomey/vim-tmux-navigator" })
     use({ "alex-laycalvert/telescope-dotfiles.nvim" })
     use({ "tom-anders/telescope-vim-bookmarks.nvim" })
-    use({ "andweeb/presence.nvim" })
+    -- use({ "andweeb/presence.nvim" })
     use({
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons",

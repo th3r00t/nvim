@@ -10,3 +10,5 @@ rt.setup({
     end,
   },
 })
+
+require("rust-tools").runnables.runnables()

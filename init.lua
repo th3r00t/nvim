@@ -32,7 +32,7 @@ require("treesitter") -- lua/treesitter.lua
 require("options")      -- lua/options.lua
 require("nvim-cmp")     -- lua/nvim-cmp.lua
 require("_telescope")   -- lua/_telescope.lua
-require("_presence")    -- lua/_presence.lua
+-- require("_presence")    -- lua/_presence.lua
 require("_whichkey")    -- lua/_whichkey.lua
 require("_mason")       -- lua/_mason.lua
 require("_rust")        -- lua/_rust.lua
@@ -59,7 +59,7 @@ require("forem-nvim").setup({
 --   background_colour = "#000000",
 -- })
 vim.cmd([[
-     colorscheme tokyonight-night
+    colorscheme tokyonight-storm
     " colorscheme falcon
 ]])
 
