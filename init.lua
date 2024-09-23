@@ -8,6 +8,7 @@ require("bootstrap")  -- lua/bootstrap.lua
 vim.g.mapleader = ","
 vim.g.localleader = ";"
 
+require("vimwiki")
 -- [[ Plugins ]] --
 require("lazy").setup(require("plugins"))  -- lua/plugins.lua
 -- [[ Options ]] -- lua/options.lua
@@ -30,6 +31,8 @@ require("orgmode")
 require("markdown")
 -- [[ Discord Configurations ]] -- lua/discord.lua
 -- require("discord")
+
+-- [[ Testing Configs ]]
 
 -- [[ Set Visual Options ]] --
 require('lualine').setup()
